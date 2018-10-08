@@ -1,16 +1,21 @@
-Installation
-============
+# Focus
 
-Copy this folder to the gnome-shell extension folders, typically under `.local/share/gnome-shell/extensions`.
+Focus is an extension for Gnome 3.18+ that mutes the color on your desktop,
+allowing you to focus better. You'd be surprised how much the amount of color
+on your desktop can distract you, or suck you into your screen for hours on end!
 
-Using a terminal, you can do the following sequence of commands :
+This is a fork of the extension Desaturate All by Nicolas Brack.
 
-$ git clone https://github.com/laerne/desaturate_all.git
-$ mv desaturate_all ".local/share/gnome-shell/extensions/desaturate_all@nicolas.brack.mail.be"
+## Installation
 
-Then restart gnome by pressing `ALT`+`F2`, then entering `r` and validating with `RETURN`.
+To install:
 
-You can now enable the extension by browsing to https://extensions.gnome.org/local .
+- Copy this folder to the Gnome extension folder: `~/.local/share/gnome-shell/extensions`.
+- Restart Gnome with `ALT`+`F2`, then enter `r` and press Enter.
+- Enable the extension with Gnome Tweak Tool.
 
+## Usage
 
-
+This extension just has an icon that appears in the top bar. You can click it
+to cycle through different levels of color muting. It ranges from the default
+full color all the way to grayscale (no color).

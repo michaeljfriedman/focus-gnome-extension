@@ -17,14 +17,19 @@ const Main = imports.ui.main;
 
 let button;
 let extension_icon;
-let color_effect;
+let mute;
+let muteLevels = [0.8, 1.0, 0.0];
+let i; // index into muteLevels
 
-function _toggleEffect() {
-    if ( Main.uiGroup.has_effects( color_effect ) ) {
-        Main.uiGroup.remove_effect( color_effect );
-    } else {
-        Main.uiGroup.add_effect( color_effect );
+function _cycleMuteLevel() {
+    mute.set_factor(muteLevels[i]);
+    i = (i+1) % muteLevels.length;
+
+    // Reapply
+    if (Main.uiGroup.has_effects(mute)) {
+        Main.uiGroup.remove_effect(mute);
     }
+    Main.uiGroup.add_effect(mute);
 }
 
 
@@ -41,10 +46,12 @@ function init() {
     button.set_child(extension_icon);
 
     //Creation of effect
-    color_effect = new Clutter.DesaturateEffect();
-    
+    mute = new Clutter.DesaturateEffect();
+    i = 0;
+    mute.set_factor(muteLevels[i]);
+
     //Signal connection
-    button.connect('button-press-event', _toggleEffect);
+    button.connect('button-press-event', _cycleMuteLevel);
 }
 
 function enable() {

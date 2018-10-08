@@ -1,6 +1,9 @@
 {
-    "uuid": "desaturate_all@nicolas.brack.mail.be",
-    "name": "Desaturate All",
-    "description": "Desature the entire gnome workspace",
-    "shell-version": ["3.18.5"]
+    "uuid": "focus@michaeljfriedman",
+    "name": "Focus",
+    "description": "Focus better by muting the color on your desktop",
+    "shell-version": [
+        "3.18.5",
+        "3.20"
+    ]
 }
