@@ -4,6 +4,8 @@
     "description": "Focus better by muting the color on your desktop",
     "shell-version": [
         "3.18.5",
-        "3.20"
+        "3.20",
+		"3.30",
+		"3.32"
     ]
 }
